@@ -1,7 +1,7 @@
 
+import Excel from "ExcelJS";
 
 function excels(data:any,excelname:any,img:any,key:any,col:any,title:any,headerNum:any,numLopp:any,imgSize:any,x:any,column_align = []){
-const Excel=require("exceljs/dist/exceljs.min.js");
  var footer = ["UNIG -[ BWATER]"];
 
    var workbook = new Excel.Workbook();
@@ -37,7 +37,7 @@ sheet.getCell('B3').value = title
      type: 'pattern',
      pattern: 'solid',
      fgColor: { argb: 'ffffff' },
-     size: 16
+    //  size: 16
    }
 
     sheet.addRows(data);
@@ -47,7 +47,7 @@ sheet.getCell('B3').value = title
      type: 'pattern',
      pattern: 'solid',
      fgColor: { argb: 'ffffff' },
-     size: 26
+    //  size: 26
    };
 
    sheet.eachRow({ includeEmpty: true }, function (row:any, rowNumber:any) {
@@ -68,7 +68,7 @@ sheet.getCell('B3').value = title
            type: 'pattern',
            pattern: 'solid',
            fgColor: { argb: 'ffffff' },
-           size: 26
+          //  size: 26
          }
        }
        }
