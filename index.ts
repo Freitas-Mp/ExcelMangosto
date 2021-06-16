@@ -1,9 +1,7 @@
 
-const Excel=require("exceljs/dist/exceljs.min.js");
-
 
 function excels(data:any,excelname:any,img:any,key:any,col:any,title:any,headerNum:any,numLopp:any,imgSize:any,x:any,column_align = []){
-
+const Excel=require("exceljs/dist/exceljs.min.js");
  var footer = ["UNIG -[ BWATER]"];
 
    var workbook = new Excel.Workbook();
