@@ -3,7 +3,7 @@
 const Excel=require("exceljs/dist/exceljs.min.js");
 
 
-function excels(data,excelname,img,key,col,title,headerNum,numLopp,imgSize,x,column_align = []){
+function excels(data:any,excelname:any,img:any,key:any,col:any,title:any,headerNum:any,numLopp:any,imgSize:any,x:any,column_align = []){
 
  var footer = ["UNIG -[ BWATER]"];
 
@@ -53,8 +53,8 @@ sheet.getCell('B3').value = title
      size: 26
    };
 
-   sheet.eachRow({ includeEmpty: true }, function (row, rowNumber) {
-     row.eachCell(function (cell, colNumber) {
+   sheet.eachRow({ includeEmpty: true }, function (row:any, rowNumber:any) {
+     row.eachCell(function (cell:any, colNumber:any) {
        cell.font = {
          name: 'Arial',
          family: 2,
@@ -164,8 +164,8 @@ sheet.getCell('B3').value = title
      });
    });
    
-   workbook.xlsx.writeBuffer().then(Data => {
-     var blob = new Blob([Data], { type: this.blobType });
+   workbook.xlsx.writeBuffer().then((Data:any) => {
+     var blob = new Blob([Data]);
 
      var url = window.URL.createObjectURL(blob);
      var a = document.createElement("a");
