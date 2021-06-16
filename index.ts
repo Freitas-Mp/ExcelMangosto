@@ -1,4 +1,4 @@
-import * as Excel from 'exceljs/dist/exceljs.min.js';
+import * as Excel from 'ExcelJS';
 
 function excels(data:any,excelname:any,img:any,key:any,col:any,title:any,headerNum:any,numLopp:any,imgSize:any,x:any,column_align = []){
  var footer = ["UNIG -[ BWATER]"];
